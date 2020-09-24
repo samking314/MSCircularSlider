@@ -60,20 +60,8 @@ public class MSDoubleHandleCircularSlider: MSCircularSlider {
     }
     
     /** The minimum distance between the two handles - *default: 10* */
-    public var minimumHandlesDistance: CGFloat = 10 {    // distance between handles
-        didSet {
-            let maxValue = CGFloat.pi * calculatedRadius * maximumAngle / 360.0
-            
-            if minimumHandlesDistance < 1 {
-                print("minimumHandlesDistance \(minimumHandlesDistance) should be 1 or more - setting member to 1")
-                minimumHandlesDistance = 1
-            }
-            else if minimumHandlesDistance > maxValue {
-                print("minimumHandlesDistance \(minimumHandlesDistance) should be \(maxValue) or less - setting member to \(maxValue)")
-                minimumHandlesDistance = maxValue
-            }
-        }
-    }
+    public var minimumHandlesDistance: CGFloat = 10    // distance between handles
+
     
     // SECOND HANDLE'S PROPERTIES
     
